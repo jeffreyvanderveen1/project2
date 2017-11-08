@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+<?php 
+session_start(); 
+?>
+
 <html lang="en">
 
 	<head>
@@ -39,29 +43,25 @@
 					
 					<table id = "regform">
 						<tr>
-							<td>Loginnaam</td>
-							<td><input onclick = "resetClass(0)" class = "inputbar" type = "text" name = "Loginnaam" placeholder = "Loginnaam"></td>
-						</tr>
-						<tr>
-							<td>Wachtwoord</td>
-							<td><input onclick = "resetClass(1)" class = "inputbar" type = "password" name = "Wachtwoord" placeholder = "Wachtwoord"></td>
-						</tr>
-						<tr>
 							<td>Voornaam</td>
-							<td><input onclick = "resetClass(2)" class = "inputbar" type = "text" name = "Voornaam" placeholder = "Voornaam"></td>
+							<td><input onclick = "resetClass(0)" class = "inputbar" type = "text" name = "Voornaam" placeholder = "Voornaam"></td>
 						</tr>
 						<tr>
 							<td>Achternaam</td>
-							<td><input onclick = "resetClass(3)" class = "inputbar" type = "text" name = "Achternaam" placeholder = "Achternaam"></td>
+							<td><input onclick = "resetClass(1)" class = "inputbar" type = "text" name = "Achternaam" placeholder = "Achternaam"></td>
 						</tr>
 						<tr>
 							<td>Woonplaats</td>
-							<td><input onclick = "resetClass(4)" class = "inputbar" type = "text" name = "Woonplaats" placeholder = "Woonplaats"></td>
+							<td><input onclick = "resetClass(2)" class = "inputbar" type = "text" name = "Woonplaats" placeholder = "Woonplaats"></td>
 							<td><input id="pc_set" class = "inputbar_pc" type = "text" name = "Postcode" placeholder = "Postcode"></td>
 						</tr>
 						<tr>
 							<td>E-Mail</td>
-							<td><input onclick = "resetClass(5)" class = "inputbar" type = "text" name = "E-mail" placeholder = "voorbeeld@website.com"></td>
+							<td><input onclick = "resetClass(3)" class = "inputbar" type = "text" name = "E-mail" placeholder = "voorbeeld@website.com"></td>
+						</tr>
+						<tr>
+							<td>Wachtwoord</td>
+							<td><input onclick = "resetClass(4)" class = "inputbar" type = "password" name = "Wachtwoord" placeholder = "Wachtwoord"></td>
 						</tr>
 						<tr>
 							<td></td>
@@ -95,6 +95,7 @@ $("#submit").click(function(){
         url: "includes/register.php",
         data: Serialized,
         success: function(data) {
+			alert("dd");
 
 			$('#response').html(data);
 			

@@ -27,11 +27,11 @@ session_start();
 		
 		<div id = "body-real">
 		
-			<h1>Home</h1>
+			<h1>Beheerders</h1>
 			
 			<div id = "body-content-box">
-				<p>Welkom op de website van Show no Mercy</p>
-				<p>Het doel van deze website is het verzamelen van gegevens van gamers, om een analyse te krijgen in hoeverre mensen nog spellen spelen en op welke manier.</p>
+				<p>Welkom op de beheerders pagina van Show No Mercy</p>
+				
 			</div>
 		
 		</div>
