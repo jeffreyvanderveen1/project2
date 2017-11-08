@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php 
-session_start(); 
+session_start();
 ?>
 
 
@@ -11,6 +11,8 @@ session_start();
 		<title>Show no Mercy</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="includes/navigation.css">
+		<link rel="stylesheet" href="includes/registration.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -30,7 +32,36 @@ session_start();
 			<h1>Beheerders</h1>
 			
 			<div id = "body-content-box">
-				<p>Welkom op de beheerders pagina van Show No Mercy</p>
+			
+			
+			<?php
+				if(isset($_SESSION['manager']))
+				{ 
+					if(!$_SESSION['manager'])
+					{
+						?>
+						<div id = "response-negative">
+						U heeft geen toegang tot deze pagina.
+						</div>
+						<?php
+					}
+					else
+					{
+						?>
+						<p>lalalalalalal</p>
+						<?php
+					}
+				}
+				else
+				{
+					?>
+					<div id = "response-negative">
+					U heeft geen toegang tot deze pagina.
+					</div>
+					<?php					
+				}
+			?>
+				
 				
 			</div>
 		
